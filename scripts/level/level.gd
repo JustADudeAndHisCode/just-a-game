@@ -120,5 +120,4 @@ func _refresh_editor_label() -> void:
             tile_name = "Water"
         TILE_FIRE:
             tile_name = "Fire"
-    var editor_state = "ON" if editor_enabled else "OFF"
-    editor_label.text = "Editor: %s | Tile: %s (1-3)" % [editor_state, tile_name]
+    editor_label.text = "Editor: %s | Tile: %s (1-3)" % [editor_enabled ? "ON" : "OFF", tile_name]

@@ -1,0 +1,91 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id=1]
+
+[node name="MainMenu" type="Control"]
+script = ExtResource(1)
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.08, 0.08, 0.12)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(520, 520)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+padding_left = 24.0
+padding_top = 24.0
+padding_right = 24.0
+padding_bottom = 24.0
+
+[node name="Title" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+text = "Just A Game"
+
+[node name="StartButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+text = "Start (Level 1)"
+
+[node name="LevelRow" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+
+[node name="LevelLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/LevelRow"]
+text = "Level"
+
+[node name="LevelSelect" type="OptionButton" parent="CenterContainer/PanelContainer/VBoxContainer/LevelRow"]
+custom_minimum_size = Vector2(200, 0)
+
+[node name="LoadSelectedButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+text = "Load Selected Level"
+
+[node name="SettingsLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+text = "Settings"
+
+[node name="SettingsGrid" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+columns = 2
+
+[node name="MasterLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+min_value = -40.0
+max_value = 6.0
+value = 0.0
+step = 1.0
+
+[node name="SfxLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+text = "SFX"
+
+[node name="SfxSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+min_value = -40.0
+max_value = 6.0
+value = 0.0
+step = 1.0
+
+[node name="MusicLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+min_value = -40.0
+max_value = 6.0
+value = 0.0
+step = 1.0
+
+[node name="VoiceLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+text = "Voice"
+
+[node name="VoiceSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/SettingsGrid"]
+min_value = -40.0
+max_value = 6.0
+value = 0.0
+step = 1.0
+
+[node name="HintLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+text = "Controls: WASD/Arrows Move, Space Jump, Shift Dash, J/K Attack, E toggle editor"
